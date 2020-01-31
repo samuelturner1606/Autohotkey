@@ -1,5 +1,8 @@
 ~CapsLock::
 Input, Key, L1
-SendInput %Key%
+if Key is Alpha
+{
+    SendInput %Key%
+}
 SetCapsLockState, Off
 return
