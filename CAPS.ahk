@@ -1,15 +1,15 @@
 ~CapsLock::
-if (A_ThisHotkey = A_PriorHotkey)
+KeyWait, CapsLock ; Release CapsLock to continue script
+Input, SingleKey, L1, {CapsLock} ; Waits for any key press after CapsLock
+if InStr(ErrorLevel, "EndKey:CapsLock") ; Detects CapsLock double-press
 {
-    MsgBox testing
+    SetCapsLockState AlwaysOn
+    KeyWait, CapsLock 
+    KeyWait, CapsLock, D ; Waits for CaspLock triple-press 
 }
-else 
+else if SingleKey is Alpha ; Alphabetical key
 {
-    Input, Key, L1, {CapsLock}
-    if Key is Alpha
-    {
-        SendInput %Key%
-    }
-    SetCapsLockState, Off
+    SendInput %SingleKey%
 }
-return 
+SetCapsLockState, Off 
+return
