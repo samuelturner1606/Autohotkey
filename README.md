@@ -20,6 +20,6 @@ A green H icon should appear on your taskbar whilst the script is running. You c
 
 ### Automatic
 To run the script automatically on Windows after the system starts up:
-1. Create a shortcut for either CAPS.ahk or CAPS.exe (AutoHotKey must be installed if CAPS.ahk chosen)
+1. Create a shortcut for either [CAPS](CAPS.ahk) or [CAPS](CAPS.exe) (AutoHotKey must be installed if CAPS.ahk chosen)
 2. Press Win + R, type shell:startup and click ok to open the startup folder in File Explorer
 3. Place the shortcut into the startup folder
