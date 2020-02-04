@@ -1,3 +1,4 @@
+#NoTrayIcon
 ~CapsLock::
 KeyWait, CapsLock ; Release CapsLock to continue script
 Input, SingleKey, L1, {CapsLock} ; Waits for any key press after CapsLock
